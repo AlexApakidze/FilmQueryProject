@@ -5,10 +5,15 @@ import java.util.List;
 import com.skilldistillery.filmquery.entities.Actor;
 import com.skilldistillery.filmquery.entities.Film;
 
-public interface DatabaseAccessor
-{
-  public Film findFilmById(int filmId) throws SQLException;
-  public Actor findActorById(int actorId) throws SQLException;
-  public List<Actor> findActorsByFilmId(int filmId);
-  public List<Film> findFilmsByActorId(int actorId);
+public interface DatabaseAccessor {
+	public Film findFilmById(int filmId) throws SQLException;
+
+	public Actor findActorById(int actorId) throws SQLException;
+
+	public List<Actor> findActorsByFilmId(int filmId);
+
+	public List<Film> findFilmsByActorId(int actorId);
+
+	public List<Film> findFilmByKeyword(String searchTerm) throws SQLException;
+
 }

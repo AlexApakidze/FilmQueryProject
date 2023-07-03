@@ -17,19 +17,18 @@ public class Film {
 	private String rating;
 	private String specialFeatures;
 	private List<Actor> actors;
-	
-	
-	
+
 	@Override
 	public String toString() {
-		return "Film [Id=" + filmId + ", Title=" + title + ", Description=" + description + ", Release Year="
-				+ releaseYear + ", Language Id=" + languageId + ", Rental Duration=" + rentalDuration + ", Rental Rate="
-				+ rentalRate + ", Length=" + length + ", Replacement Cost=" + replacementCost + ", Rating=" + rating
-				+ ", specialFeatures=" + specialFeatures + " Actors= "+actors+"]";
+		String[] language = { "Javanese", "English", "Italian ", " Japanese", " Mandarin", " French ", " German" };
+
+		return "\n\nTitle: " + title + "\nRelease Year: " + releaseYear + "\nLanguage: " + language[languageId]
+				+ "\nRating: " + rating + "\nDescription: " + description + "\nActors: " + actors;
 	}
 
 	public Film(int filmId, String title, String description, short releaseYear, int languageId, int rentalDuration,
-			double rentalRate, int length, double replacementCost, String rating, String specialFeatures, List<Actor> actors) {
+			double rentalRate, int length, double replacementCost, String rating, String specialFeatures,
+			List<Actor> actors) {
 		this.filmId = filmId;
 		this.title = title;
 		this.description = description;
@@ -41,12 +40,11 @@ public class Film {
 		this.replacementCost = replacementCost;
 		this.rating = rating;
 		this.specialFeatures = specialFeatures;
-		this.actors=actors;
+		this.actors = actors;
 
 	}
 
 	public Film() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getFilmId() {
@@ -137,7 +135,6 @@ public class Film {
 		this.specialFeatures = specialFeatures;
 	}
 
-	
 	public List<Actor> getActors() {
 		return actors;
 	}
@@ -168,6 +165,5 @@ public class Film {
 				&& Double.doubleToLongBits(replacementCost) == Double.doubleToLongBits(other.replacementCost)
 				&& Objects.equals(specialFeatures, other.specialFeatures) && Objects.equals(title, other.title);
 	}
-	
-	
+
 }

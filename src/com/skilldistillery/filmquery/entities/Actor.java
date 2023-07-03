@@ -8,24 +8,15 @@ public class Actor {
 	private String firstName;
 	private String lastName;
 	private List<Film> films;
-	
-	
 
 	public Actor() {
 	}
 
-	
-	
-	
-	
 	@Override
 	public String toString() {
-		return "Actor [Id=" + id + ", First Name=" + firstName + ", Last Name=" + lastName + ", Films=" + films + "]";
+
+		return "\n(ID: " + id + ") " + firstName + " " + lastName;
 	}
-
-
-
-
 
 	public Actor(int id, String firstName, String lastName) {
 		super();

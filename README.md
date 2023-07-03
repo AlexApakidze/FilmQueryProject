@@ -6,10 +6,10 @@ The film Query project is a project where I used the JVM to run and execute code
 
 ## Technologies Used
 
-Java
-SQL
-DriverManager
-MacBook
+- Java
+- SQL
+- DriverManager
+- MacBook
 
 ## Lessons Learned
 
